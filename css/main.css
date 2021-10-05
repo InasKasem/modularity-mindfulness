@@ -19,230 +19,124 @@ html {
 
 body {
   margin: 0;
+  padding: 1rem;
 }
 
 img {
-  display: flex;
+  display: block;
   width: 100%;
 }
 
-.img-flex {
-  margin-top: 0;
-  padding-top: 1rem;
-}
-
 header {
-  padding: 1rem;
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-items: center;
-  margin-bottom: 1.25rem;
-  padding-bottom: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 h1 {
-  padding-top: 0;
-  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  font-size: 2em;
   margin: 0;
-}
-
-.header-text p {
-  font-size: 1.125rem;
-  margin: 0;
-}
-
-.header-text {
-  padding-top: 0;
-  padding-bottom: 0;
-  align-items: center;
-  margin-bottom: 0;
-}
-
-nav {
   padding: 0;
-  padding-top: 0;
-  padding-bottom: 0;
 }
 
 nav ul {
-  padding-left: 0;
-  margin-top: 0;
-  display: grid;
-  gap: 1rem;
-  list-style: none;
-  grid-auto-flow: column dense;
-}
-
-li a {
-  font-size: 1.125rem;
-  justify-self: center;
-  color: #3783a3;
-  font-weight: 100;
-}
-
-.subheader {
-  padding: 1rem;
-  padding-bottom: 0;
-  padding-top: 0;
-  border: .2rem solid #e2e2e2;
-  border-left-width: 0;
-  border-right-width: 0;
-  margin-bottom: 0;
-  max-width: 30em;
-}
-
-h2 {
+  list-style-type: none;
+  padding: 0;
   margin: 0;
-  padding: 1rem;
-  padding-bottom: .5rem;
-  font-size: 2rem;
-  max-width: 30em;
-  text-align: center;
-  font-weight: normal;
-}
-
-.subheader p {
-  margin-bottom: 1.5rem;
-  padding: .5rem;
-  font-size: 1rem;
-  margin-top: 0;
-  max-width: 30em;
-  text-align: center;
+  display: flex;
   justify-content: center;
 }
 
-section {
-  display: block;
-  padding: 1rem;
-  padding-top: 0;
-  padding-bottom: 0;
+ul li {
+  font-size: 1.125rem;
+  font-style: normal;
+  padding: 0 .5rem 1rem;
 }
 
-section p {
-  font-size: 1rem;
-  margin-bottom: 1.25rem;
-  padding-bottom: .5rem;
-}
-
-h3 {
-  font-size: 1.5rem;
-  margin-bottom: 0;
-}
-
-.subhead p {
-  margin-top: 0;
-  font-size: 1rem;
-  margin-bottom: 0;
-}
-
-.button {
-  border: .2rem solid #3783a3;
-  border-radius: .3rem;
-  padding: .5em 1em .6em;
-}
-
-.button a {
-  text-decoration: none;
+a {
   color: #3783a3;
 }
 
-footer {
-  margin: 0;
-  border: .2rem solid #e2e2e2;
-  border-left: 0;
-  border-right: 0;
-  border-bottom: 0;
+article > a {
+  text-decoration: none;
+  font-style: normal;
+  border: .2rem #3783a3 solid;
+  padding: .5em 1em .6em;
+  border-radius: .3rem;
 }
 
-footer p {
+.intro {
+  margin: 1.5rem auto;
+  padding: 1rem;
+  text-align: center;
+  border-top: .2rem solid #e2e2e2;
+  border-bottom: .2rem solid #e2e2e2;
+  max-width: 30em;
+  font-style: normal;
+}
+
+.intro i {
+  font-size: 2rem;
+}
+
+h2 {
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  display: grid;
+  grid-gap: 1rem;
+}
+
+article {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+h1 > span {
+  font-size: 1.125rem;
+  font-style: normal;
+}
+
+h2 > span {
   font-size: 1rem;
+}
+
+footer {
+  border-top: .2rem solid #e2e2e2;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
   text-align: center;
 }
 
 @media only screen and (min-width: 38em) {
 
-  html {
-    font-size: 110%;
-    line-height: 1.4;
-  }
-
-  h1,
-  p {
-    margin: 0 0 1.4rem;
-  }
-
   header {
-    padding-top: .75rem;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 .5rem 1rem;
   }
 
   h1 {
-    margin-bottom: 0;
-    place-self: start;
-  }
-
-  .header-text {
-    display: block;
-    justify-self: start;
-  }
-
-  .header-text p {
-    place-self: start;
-    grid-row: 2;
-  }
-
-  nav {
-    align-items: end;
-    place-self: end;
-    padding-bottom: .5rem;
-  }
-
-  nav ul li a {
-    font-size: 1rem;
-  }
-
-  header img {
-    grid-row: 2;
-    grid-column: 1/span 2;
-  }
-
-  body {
-    display: grid;
-  }
-
-  .subheader {
-    justify-self: center;
-  }
-
-  main {
-    margin: 1rem;
-    margin-top: .5rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1rem;
+    align-items: flex-start;
   }
 
   section {
-    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
 
-  section p {
-    font-size: .95rem;
-    margin-bottom: .5rem;
-  }
-
-  .subhead {
-    margin-bottom: .75rem;
-  }
-
-  a {
-    place-self: end;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+  article p {
+    flex-grow: 1;
   }
 
 }
